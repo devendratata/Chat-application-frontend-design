@@ -1,0 +1,209 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <style>
+        /* Bit of normalisation */
+        
+        body {
+            overflow: hidden;
+            background-color: white;
+            color: #222;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            height: 100%;
+            width: 30%;
+        }
+        
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+        
+        .container {
+            padding: 20px 20px;
+            margin: 0 auto;
+            width: auto;
+            max-width: 100%;
+            background-color: #eee;
+        }
+        
+        .chatCollections {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 75%;
+        }
+        /* .bubble */
+        
+        .bubble {
+            background-color: rgba(103, 242, 9, 0.62);
+            /* vendor rules */
+            
+            border-radius: 20px;
+            /* vendor rules */
+            
+            box-shadow: inset 0 5px 5px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+            /* vendor rules */
+            
+            min-height: 40px;
+            box-sizing: border-box;
+            clear: both;
+            float: left;
+            margin-left: 5px;
+            margin-bottom: 20px;
+            padding: 8px 30px;
+            position: relative;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+            width: auto;
+            max-width: 90%;
+            word-wrap: break-word;
+        }
+        
+        .bubble:before,
+        .bubble:after {
+            border-radius: 20px / 10px;
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        
+        .bubble:before {
+            border-bottom-color: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            left: -7px;
+            z-index: -2;
+        }
+        
+        .bubble:after {
+            border: 8px solid transparent;
+            border-bottom-color: rgba(103, 242, 9, 0.62);
+            bottom: 2px;
+            left: -5px;
+        }
+        
+        .bubble--alt {
+            min-height: 40px;
+            background-color: white;
+            float: right;
+            margin-right: 5px;
+        }
+        
+        .bubble--alt:before {
+            border-bottom-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px / 10px;
+            left: auto;
+            right: -7px;
+        }
+        
+        .bubble--alt:after {
+            border-bottom-color: white;
+            border-radius: 20px / 10px;
+            left: auto;
+            right: -5px;
+        }
+        
+        .message {
+            padding: 10px 0px 0px 0px;
+        }
+        
+        .content {
+            display: inline-block;
+            word-wrap: break-word;
+            width: 100%;
+        }
+        
+        .time {
+            margin-top: 3px;
+            text-align: right;
+            padding: 0px 0px 0px 15px;
+            font-size: 10px;
+        }
+        
+        .name {
+            color: #e5a22a;
+        }
+        
+        .attachment {
+            display: inline-block;
+        }
+        
+        .attachment img {
+            height: 100px;
+            width: 100px;
+        }
+        
+        .chatControls {
+            padding-top: 5px;
+        }
+        
+        .textareaBox {}
+        
+        .textbox {
+            width: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="chatCollections">
+
+            <div class="bubble">
+                <div class="name">Designer:</div>
+                <div class="message">
+                    <div class="content">Blue text bubble</div>
+                    <div class="time">11.00</div>
+                </div>
+            </div>
+
+            <div class="bubble bubble--alt">
+                <div class="name">client:</div>
+                <div class="message">
+                    <div class="content">Green text bubble</div>
+                    <div class="time">11.00</div>
+                </div>
+
+            </div>
+
+            <div class="bubble">
+                <div class="name">Designer:</div>
+                <div class="message">
+                    <div class="content">A bubble containing lots and lots and lots and lots of content on multiple lines</div>
+                    <div class="time">11.00</div>
+                </div>
+            </div>
+
+            <div class="bubble bubble--alt">
+                <div class="name">client:</div>
+                <div class="message">
+                    <div class="content">Bubble with image</div>
+                    <div class="time">11.00</div>
+                </div>
+            </div>
+
+            <div class="bubble">
+                <div class="name">Designer:</div>
+                <div class="message">
+                    <div class="content">Bubblewitharidiculouslylongwordwhichwrapseffortlesslyontotwolines</div>
+                    <div class="time">11.00</div>
+                </div>
+            </div>
+            <div class="bubble bubble--alt">
+                <div class="name">client:</div>
+                <div class="message">
+                    <div class="attachment"><img src="handshake.png" altext="">
+                    </div>
+                    <div class="time">11.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="chatControls">
+            <div class="textareaBox">
+                <textarea class="textbox" placeholder="write a reply...."></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
